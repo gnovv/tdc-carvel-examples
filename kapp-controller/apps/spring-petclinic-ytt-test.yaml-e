@@ -7,7 +7,7 @@ spec:
   serviceAccountName: kapp-ns-admin
   fetch:
     - git:
-        url: https://github.com/gnovv/my-kapp-repo
+        url: https://github.com/vmware-tanzu-labs/tdc-carvel-examples
         ref: origin/main
         subPath: app-ytt
   template:

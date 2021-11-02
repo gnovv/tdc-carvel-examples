@@ -1,15 +1,15 @@
 apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
-  name: spring-petclinic
-  namespace: test
+  name: ns-rbac-test
+  namespace: apps-mgmt
 spec:
-  serviceAccountName: kapp-ns-admin
+  serviceAccountName: kapp-cluster-admin
   fetch:
     - git:
-        url: https://github.com/gnovv/my-kapp-repo
+        url: https://github.com/vmware-tanzu-labs/tdc-carvel-examples
         ref: origin/main
-        subPath: app-ytt
+        subPath: ns-rbac
   template:
     - ytt:
         inline:
